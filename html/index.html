@@ -34,18 +34,7 @@
 </head>
 <body>
     <table>
-        <script>
-            const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-            const numbers = [8, 7, 6, 5, 4, 3, 2, 1];
-            for (let i = 0; i < 8; i++) {
-                document.write('<tr>');
-                for (let j = 0; j < 8; j++) {
-                    let colorClass = (i + j) % 2 === 0 ? 'white' : 'black';
-                    document.write(`<td class="${colorClass}"></td>`);
-                }
-                document.write('</tr>');
-            }
-        </script>
+        <script src="js/board.js"></script>
     </table>
 </body>
 </html>
