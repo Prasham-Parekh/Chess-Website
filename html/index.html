@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+        td {
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 24px;
+        }
+        .white {
+            background-color: #f0d9b5;
+        }
+        .black {
+            background-color: #b58863;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <script>
+            const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+            const numbers = [8, 7, 6, 5, 4, 3, 2, 1];
+            for (let i = 0; i < 8; i++) {
+                document.write('<tr>');
+                for (let j = 0; j < 8; j++) {
+                    let colorClass = (i + j) % 2 === 0 ? 'white' : 'black';
+                    document.write(`<td class="${colorClass}"></td>`);
+                }
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+</body>
+</html>
